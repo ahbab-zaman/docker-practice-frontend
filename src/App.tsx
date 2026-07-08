@@ -1,9 +1,7 @@
+import AppRouter from "@/routes/AppRouter"
+
 function App() {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      <h1 className="text-2xl font-bold p-4">E-Commerce App</h1>
-    </div>
-  )
+  return <AppRouter />
 }
 
 export default App

@@ -1,20 +1,22 @@
 type Props = {
-  size?: "sm" | "md" | "lg";
-  className?: string;
-};
+  size?: "sm" | "md" | "lg"
+  className?: string
+}
 
-const sizeStyles: Record<NonNullable<Props["size"]>, string> = {
+const sizeClasses = {
   sm: "h-4 w-4 border-2",
-  md: "h-8 w-8 border-[3px]",
-  lg: "h-12 w-12 border-4",
-};
+  md: "h-6 w-6 border-2",
+  lg: "h-8 w-8 border-3",
+}
 
-export default function Spinner({ size = "md", className = "" }: Props) {
+function Spinner({ size = "md", className = "" }: Props) {
   return (
-    <div
-      className={`animate-spin rounded-full border-border border-t-primary ${sizeStyles[size]} ${className}`}
+    <span
+      className={`inline-block animate-spin rounded-full border-current border-t-transparent text-primary ${sizeClasses[size]} ${className}`}
       role="status"
       aria-label="Loading"
     />
-  );
+  )
 }
+
+export default Spinner
