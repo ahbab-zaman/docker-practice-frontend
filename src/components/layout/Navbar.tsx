@@ -47,7 +47,7 @@ function Navbar() {
     <nav className="border-b border-border bg-surface">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <NavLink to={ROUTES.HOME} className="text-lg font-bold text-foreground">
-          E-Commerce
+          DockerBase
         </NavLink>
 
         <button
