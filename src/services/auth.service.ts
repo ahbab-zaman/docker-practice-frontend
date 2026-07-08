@@ -22,6 +22,6 @@ export async function logout(): Promise<ApiResponse<void>> {
 }
 
 export async function getMe(): Promise<ApiResponse<User>> {
-  const { data } = await api.get<ApiResponse<User>>("/auth/me")
+  const { data } = await api.get<ApiResponse<User>>("/user/me")
   return data
 }
